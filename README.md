@@ -40,3 +40,9 @@ You and your group will use everything you’ve learned over the past six module
 * Be responsive.
 
 * Have a polished UI.
+
+# Wireframe
+
+![wireframe 1](./assets/images/Untitled%20presentation.jpg)
+
+![wireframe 2](./assets/images/Untitled%20presentation%20(1).jpg)
