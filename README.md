@@ -8,7 +8,17 @@ As a normal person in society, I WANT an application that gives me a daily quote
 
 ## For this Application 
 
-* Given I open the application
+* Given I open the application 
+
+* When I open the application. Then I am prompted to choose an option between a zen or advice quote.
+
+* When I select a zen quote, Then I am presented with a zen quote
+
+* When I select an advice quote, Then I am presented with an advice quote
+
+* When the quote appears, Then I am presented with the day's current weather.
+
+* When the daily weather appears, Then I am prompted on what I should wear for the day. 
 
 
 ## For this Project
