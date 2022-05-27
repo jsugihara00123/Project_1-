@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
-    
+
     <title>Project 1 - Daily Weather and Moticational Quote</title>
 
     <script
@@ -17,30 +18,40 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="callout large primary">
         <h1>Daily Weather and Motivational Quote</h1>
     </header>
 
-    <div class="container">        
-        <div class="weather">
-            <h2>Today's Weather</h2>
-
-        </div>
-
-        <div class="accessories">
-            <h2>The accessories you'll need today are: <span id="accessories"></span></h2>
-            
-
-        </div>
-
-        <div class="dialyQuote">
-            <h2>Your Daily <span id=quoteType></span> Quote:</h2>
-
+    <div class="container"> 
         
+        <div class="leftContainer">   
+            <div class="column">
+                <div class="weather text-center">
+                    <h2>Today's Weather</h2>
+                </div>
+            </div>
         </div>
-
+      
+        <div class="rightContainer">
+            <div class="column">
+                <div class="text-center">        
+                    <div class="accessories">
+                        <h2>The accessories you'll need today are: <span id="accessories"></span></h2>
+                        
+                    </div>
+            
+                    <div class="dialyQuote">
+                        <h2>Your Daily <span id=quoteType></span> Quote:</h2>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
+
+        
+    
 
     <script src="./assets/script.js"></script>
 </body>
