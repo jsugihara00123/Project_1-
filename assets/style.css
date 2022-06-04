@@ -1,8 +1,32 @@
+:root {
+  --mdc-theme-primary: rgb(69, 69, 119);
+}
 
 .container {
   display: flex;
   width: 100%;
 
+}
+
+.modal {
+  border-radius: 8px;
+  background-color: rgb(205, 229, 250);
+  text-align: center;
+  font-family: 'Arvo', serif;
+  width: 65%;
+  padding-top: 20px;
+
+}
+
+.modal button {
+  width: 25%;
+  font-family: 'Arvo', serif;
+}
+
+.modal button:hover {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px;;
 }
 
 .header {
@@ -13,7 +37,7 @@
   margin: 1.5% 2% 0% 2%;
   font-size: 25px;
   font-family: 'Arvo', serif;
-  color:rgb(105, 105, 105)
+  color:rgb(0, 0, 0)
 }
 
 .leftContainer {
@@ -24,7 +48,7 @@
   text-align: center;
   margin: 2%;
   font-family: 'Arvo', serif;
-  color:rgb(105, 105, 105);
+  color:rgb(0, 0, 0);
   background-color: rgba(211, 211, 211, 0.54);
   border-radius: 8px;
 
@@ -37,7 +61,7 @@
   justify-content: center;
   margin: 2% 2% 2% 0%;
   font-family: 'Arvo', serif;
-  color:rgb(105, 105, 105)
+  color:rgb(0, 0, 0)
 
 
 }
@@ -50,18 +74,26 @@
   margin-bottom: 3%;
   background-color: rgba(211, 211, 211, 0.54);
   border-radius: 8px;
-
-
-
 }
 
 .dailyQuote {
   display: flex;
+  flex-direction: column;
   height: 60%;
   justify-content: center;
   text-align: center;
   background-color: rgba(211, 211, 211, 0.54);
   border-radius: 8px;
+  padding: 5%;
+}
+#apiQuote {
+  font-size: 25px;
+  font-style: italic;
+}
 
-  
+
+#unsplashImage {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
