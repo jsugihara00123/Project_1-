@@ -38,10 +38,26 @@
 
     <div class="container"> 
         
-        <div class="leftContainer">   
-                <div class="weather text-center">
-                    <h2>Today's Weather</h2>
-                </div>
+        <div class="leftContainer">
+            <div class="weather text-center">
+                <h2>Today's Weather</h2>
+                <h3 id="currentWeather"></h3>
+                <h3 id="hourlyWeather"></h3>
+            </div>
+            <div class="hourlyWeatherWrapper">
+                <table class="hourlyWeatherTable">
+                    <th>
+                        <p class="hourlyHeader">Time</p>
+                    </th>
+                    <th>
+                        <p class="tempHeader">Forcast</p>
+                    </th>
+                    <th>
+                        <p class="windSpeedHeader">Wind Speed</p>
+                    </th>
+                    <tbody id="hourly-table" class="hourlyWeatherTableBody"></tbody>
+                </table>
+            </div>
         </div>
       
         <div class="rightContainer">  
