@@ -69,12 +69,19 @@
 
 .accessories {
   display: flex;
+  flex-direction: column;
   height: 40%;
   justify-content: center;
   text-align: center;
   margin-bottom: 3%;
   background-color: rgba(211, 211, 211, 0.54);
   border-radius: 8px;
+}
+
+.accessories p {
+  text-decoration: none;
+  font-size: 22px;
+  text-align: center;
 }
 
 .dailyQuote {
@@ -108,6 +115,26 @@
 .hourlyWeatherTable {
   border-collapse: separate;
   border-spacing: 1rem;
+  font-size: 20px;
+}
+
+.hourlyWeatherTable h3 {
+  text-decoration: underline;
+}
+
+.weather h2 {
+  text-decoration: underline;
+}
+#currentWeather {
+  font-size: 25px;
+}
+#uvi {
+  text-decoration: underline;
+}
+#currentUVIndex {
+  padding: 1px 3px 1px 3px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 

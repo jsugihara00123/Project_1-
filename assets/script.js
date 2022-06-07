@@ -79,11 +79,11 @@ function backgroundImage() {
             return response.json();
     })
         .then(function (jsonData) {
-            console.log(jsonData);
+            //console.log(jsonData);
             let imageElement = document.createElement('img');
             imageElement.src = jsonData.urls.regular;
             imageDiv.append(imageElement);
-            console.log(imageElement.src);
+            //console.log(imageElement.src);
             //using jquery to set the background image
             $('#unsplashImage').css('background-image', 'url(' + imageElement.src + ')');
             $('img').css('display', 'none');
@@ -104,14 +104,61 @@ function getCurrentWeatherApi(position) {
             var currentTemp = (data.main.temp)
             var currenthWeatherHeader = document.getElementById('currentWeather');
             currenthWeatherHeader.innerHTML = `Currently ${Math.round(currentTemp)}° F`
+
+            console.log(data);
+            var tempArray = ["light", "warm", "heavy"];
+
+            if(currentTemp > 60){
+              $("#dressFor").text(tempArray[0])
+            } else if(currentTemp < 60 && currentTemp > 30){
+              $("#dressFor").text(tempArray[1])
+            } else if(currentTemp < 30){
+              $("#dressFor").text(tempArray[3])
+            }
+
+            $("#weatherDescription").text(data.weather[0].description);
+
+
+
+
+
         });
+    var uviQuery = `https://api.openweathermap.org/data/2.5/uvi/forecast?appid=f3c7f6f0c1bd55045c6c4f5cb473b0de&units=imperial&lat=${position.coords.latitude}&lon=${position.coords.longitude}&cnt=1`
+
+    $.ajax({
+      url: uviQuery,
+      method: "GET"
+    })
+    .then(function(response){
+
+      $("#currentUVIndex").text(response[0].value);
+
+      console.log(response[0].value);
+
+      var uviColor = "green";
+      
+      if(response[0].value < 3){
+        uviColor = "green";
+      }
+      else if (response[0].value < 6 && response[0].value >= 3 ) {
+        uviColor = "yellow";
+      }
+      else if (response[0].value < 8 && response[0].value >= 6 ) {
+        uviColor = "orange";
+      }
+      else {
+        uviColor = "red";
+      }
+      $("#currentUVIndex").css("background-color", uviColor);
+
+    })
 }
 function getHourlyWeatherApi(position) {
     var requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lon=${position.coords.longitude}&appid=f3c7f6f0c1bd55045c6c4f5cb473b0de&units=imperial&lat=${position.coords.latitude}&exclude=minutely`;
     // console.log(requestUrl)
     fetch(requestUrl)
     .then(function (response) {
-    console.log(requestUrl)
+    //console.log(requestUrl)
         return response.json();
     })
     .then(function (response) {
@@ -144,6 +191,8 @@ function getHourlyWeatherApi(position) {
         createTableRow.appendChild(createTableDataTemp)
         createTableRow.appendChild(createTableDataWindSpeed)
         tableBody.appendChild(createTableRow)
+        
+
     }
     })
 }

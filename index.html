@@ -41,19 +41,20 @@
         <div class="leftContainer">
             <div class="weather text-center">
                 <h2>Today's Weather</h2>
-                <h3 id="currentWeather"></h3>
-                <h3 id="hourlyWeather"></h3>
+                <p id="currentWeather"></p>
+                <p><span id="uvi">UV Index:</span> <span id="currentUVIndex"></span></p>
+                
             </div>
             <div class="hourlyWeatherWrapper">
                 <table class="hourlyWeatherTable">
                     <th>
-                        <p class="hourlyHeader">Time</p>
+                        <h3 class="hourlyHeader">Time</h3>
                     </th>
                     <th>
-                        <p class="tempHeader">Forcast</p>
+                        <h3 class="tempHeader">Forcast</h3>
                     </th>
                     <th>
-                        <p class="windSpeedHeader">Wind Speed</p>
+                        <h3 class="windSpeedHeader">Wind Speed</h3>
                     </th>
                     <tbody id="hourly-table" class="hourlyWeatherTableBody"></tbody>
                 </table>
@@ -62,7 +63,8 @@
       
         <div class="rightContainer">  
             <div class="accessories">
-                <h2>The accessories you'll need today are: <span id="accessories"></span></h2>
+                <h2>Preparation for todays weather:</h2>
+                    <p> Dress <span id="dressFor"></span> and prepare for: <span id="weatherDescription"></span></p>
             </div>
     
             <div class="dailyQuote">
