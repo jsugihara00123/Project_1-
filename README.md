@@ -10,15 +10,17 @@ As a normal person in society, I WANT an application that gives me a daily quote
 
 * Given I open the application 
 
-* When I open the application. Then I am prompted to choose an option between a zen or advice quote.
+* When I open the application. Then I am prompted to choose an option between a inspirational or an advice quote.
 
-* When I select a zen quote, Then I am presented with a zen quote
+* When I select an inspirational quote, Then I am presented with an inspirational quote
 
 * When I select an advice quote, Then I am presented with an advice quote
 
 * When the quote appears, Then I am presented with the day's current weather.
 
-* When the daily weather appears, Then I am prompted on what I should wear for the day. 
+* When the daily weather appears, Then I am prompted on how I should dress and what weather to expect.
+
+* When the page loads, Then the background image will load
 
 
 ## For this Project
@@ -46,3 +48,13 @@ You and your group will use everything you’ve learned over the past six module
 ![wireframe 1](./assets/images/Untitled%20presentation.jpg)
 
 ![wireframe 2](./assets/images/Untitled%20presentation%20(1).jpg)
+
+# What it should look like
+
+## On load
+
+![Image 1](./assets/images/Screen%20Shot%202022-06-07%20at%205.15.49%20PM.png)
+
+## Once option is selected
+
+![Image 2](./assets/images/Screen%20Shot%202022-06-07%20at%205.15.34%20PM.png)
