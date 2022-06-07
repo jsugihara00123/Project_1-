@@ -118,10 +118,6 @@ function getCurrentWeatherApi(position) {
 
             $("#weatherDescription").text(data.weather[0].description);
 
-
-
-
-
         });
     var uviQuery = `https://api.openweathermap.org/data/2.5/uvi/forecast?appid=f3c7f6f0c1bd55045c6c4f5cb473b0de&units=imperial&lat=${position.coords.latitude}&lon=${position.coords.longitude}&cnt=1`
 
@@ -150,6 +146,10 @@ function getCurrentWeatherApi(position) {
         uviColor = "red";
       }
       $("#currentUVIndex").css("background-color", uviColor);
+
+      if(response[0].value > 6){
+        $("#sunscreen").text("* Since todays UV index is high, we recommend wearing sunscreen today. *")
+      }
 
     })
 }
