@@ -2,7 +2,8 @@
 
 # User Story
 
-As a normal person in society, I WANT an application that gives me a daily quote and what to wear based on the weather so I can be motivated for the day and be better prepared. 
+As a normal person in society, I WANT an application that gives me the days weather, advice on how to dress for the day, and a quote to get me motivated for the day. 
+
 
 # Acceptance Criteria 
 
@@ -58,3 +59,13 @@ You and your group will use everything you’ve learned over the past six module
 ## Once option is selected
 
 ![Image 2](./assets/images/Screen%20Shot%202022-06-07%20at%205.15.34%20PM.png)
+
+# Technology used
+
+HTML, CSS, Javascript, Material Design, Google Fonts, JQuery
+
+Unsplash API for background
+
+type.fit API and AdviceSlip API for inspirational and advice quotes
+
+OpenWeather API for current and hourly weather

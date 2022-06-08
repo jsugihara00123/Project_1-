@@ -40,6 +40,9 @@ function zenQuotes(){
     $('#apiQuote').text('"' + quote + '"');
     $('#by').text("By: " + author);
 
+    localStorage.setItem("TodaysQuote", JSON.stringify(quote));
+    localStorage.setItem("TodaysAuthor", JSON.stringify(author));
+
     //console.log(quote);
     //console.log(author);
     //console.log(quoteArray);
@@ -59,6 +62,8 @@ function InspirationalQuotes(){
     
     $('#apiQuote').text('"' + quote + '"');
     $('#by').text("By: Unkown");
+
+    localStorage.setItem("TodaysQuote", JSON.stringify(quote));
 
     //console.log(quote);
     //console.log(author);
@@ -115,8 +120,12 @@ function getCurrentWeatherApi(position) {
             } else if(currentTemp < 30){
               $("#dressFor").text(tempArray[3])
             }
+            var description = data.weather[0].description;
 
-            $("#weatherDescription").text(data.weather[0].description);
+            $("#weatherDescription").text(description);
+
+            localStorage.setItem("todaysWeatherDes", JSON.stringify(description));
+
 
         });
     var uviQuery = `https://api.openweathermap.org/data/2.5/uvi/forecast?appid=f3c7f6f0c1bd55045c6c4f5cb473b0de&units=imperial&lat=${position.coords.latitude}&lon=${position.coords.longitude}&cnt=1`
@@ -150,6 +159,9 @@ function getCurrentWeatherApi(position) {
       if(response[0].value > 6){
         $("#sunscreen").text("* Since todays UV index is high, we recommend wearing sunscreen today. *")
       }
+
+      localStorage.setItem("todaysUVI", JSON.stringify(response[0].value));
+
 
     })
 }
